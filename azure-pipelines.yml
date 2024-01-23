@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 'azure-ssh'
+    sshEndpoint: 'azureadmin-pass'
     contents: '**'
     targetFolder: '/var/www/html/'
     readyTimeout: '20000'
