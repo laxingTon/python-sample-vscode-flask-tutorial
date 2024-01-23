@@ -20,7 +20,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'azure-ssh'
-    sourceFolder: '/home/azureadmin'
-    contents: '**'
+    sourceFolder: '/home/azureadmin/'
+    contents: 'index.html'
     targetFolder: '/var/www/html/'
     readyTimeout: '20000'
