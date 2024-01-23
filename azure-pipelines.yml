@@ -21,5 +21,11 @@ steps:
   inputs:
     sshEndpoint: 'azure-ssh'
     runOptions: 'commands'
-    commands: 'ls /var/www/html/'
+    commands: 'cp index.html /var/www/html/index.html'
+    readyTimeout: '20000'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'azure-ssh'
+    runOptions: 'commands'
+    commands: 'sudo service nginx restart'
     readyTimeout: '20000'
